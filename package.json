@@ -1,0 +1,26 @@
+{
+	"name": "dataflow-pro-docs",
+	"version": "3.0.0",
+	"description": "Marp presentation for DataFlow Pro product documentation",
+	"main": "slides.md",
+	"scripts": {
+		"preview": "marp -s slides.md",
+		"build:pdf": "marp slides.md --pdf -o DataFlow-Pro-v3.0-Documentation.pdf",
+		"build:html": "marp slides.md --html -o index.html",
+		"build:pptx": "marp slides.md --pptx -o DataFlow-Pro-v3.0-Documentation.pptx",
+		"build:all": "npm run build:pdf && npm run build:html && npm run build:pptx",
+		"watch": "marp -w slides.md"
+	},
+	"keywords": [
+		"marp",
+		"presentation",
+		"documentation",
+		"product-docs",
+		"technical-writing"
+	],
+	"author": "24f2001777@ds.study.iitm.ac.in",
+	"license": "Apache-2.0",
+	"devDependencies": {
+		"@marp-team/marp-cli": "^3.4.0"
+	}
+}

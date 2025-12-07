@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Q4 2025 Earnings Report - Financial Institution</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reset.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/theme/black.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/highlight/monokai.css"
+		/>
+		<style>
+			.reveal h1,
+			.reveal h2,
+			.reveal h3 {
+				text-transform: none;
+			}
+			.reveal .slides section .fragment.highlight-current-blue {
+				opacity: 1;
+				visibility: inherit;
+			}
+			.reveal
+				.slides
+				section
+				.fragment.highlight-current-blue.current-fragment {
+				color: #42affa;
+			}
+			.financial-metric {
+				display: inline-block;
+				padding: 20px;
+				margin: 10px;
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 10px;
+				min-width: 200px;
+			}
+			.metric-value {
+				font-size: 2em;
+				color: #4caf50;
+				font-weight: bold;
+			}
+			.metric-label {
+				font-size: 0.8em;
+				color: #ccc;
+			}
+			.email-footer {
+				position: fixed;
+				bottom: 10px;
+				right: 20px;
+				font-size: 0.6em;
+				color: #666;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Title Slide -->
+				<section
+					data-background-gradient="linear-gradient(to bottom, #1e3a8a, #1e40af)"
+				>
+					<h1>Q4 2025 Earnings Report</h1>
+					<h3>Quarterly Financial Performance</h3>
+					<p style="margin-top: 50px">
+						<small>Prepared by: Technical Consultant</small><br />
+						<small style="color: #4caf50"
+							><a
+								href="mailto:24f2001777@ds.study.iitm.ac.in"
+								style="color: #4caf50; text-decoration: none"
+								>24f2001777@ds.study.iitm.ac.in</a
+							></small
+						>
+					</p>
+					<aside class="notes">
+						Welcome everyone to our Q4 2025 earnings presentation. Today we'll
+						cover our financial performance, key metrics, technical
+						implementations, and forward-looking projections.
+					</aside>
+				</section>
+
+				<!-- Executive Summary - Markdown Slide -->
+				<section data-markdown data-background-color="#0f172a">
+					<textarea data-template>
+                    ## Executive Summary
+                    
+                    **Q4 2025 Highlights:**
+                    
+                    * Revenue increased by **23.5%** year-over-year
+                    * Customer base grew to **2.3M** active accounts
+                    * Digital transformation initiatives on track
+                    * Strategic investments in AI and ML technologies
+                    
+                    ---
+                    
+                    Our institution continues to demonstrate strong fundamentals 
+                    and market leadership in the financial services sector.
+                </textarea
+					>
+					<aside class="notes">
+						This slide provides a high-level overview of our performance. Note
+						the strong YoY growth and expanding customer base. The digital
+						transformation is a key strategic initiative.
+					</aside>
+				</section>
+
+				<!-- Financial Metrics with Fragments -->
+				<section>
+					<h2>Key Financial Metrics</h2>
+					<div style="margin-top: 50px">
+						<div class="financial-metric fragment fade-in-then-semi-out">
+							<div class="metric-value">$2.8B</div>
+							<div class="metric-label">Total Revenue</div>
+						</div>
+						<div class="financial-metric fragment fade-in-then-semi-out">
+							<div class="metric-value">$847M</div>
+							<div class="metric-label">Net Income</div>
+						</div>
+						<div class="financial-metric fragment fade-in-then-semi-out">
+							<div class="metric-value">30.3%</div>
+							<div class="metric-label">Profit Margin</div>
+						</div>
+						<div class="financial-metric fragment fade-in">
+							<div class="metric-value">$4.85</div>
+							<div class="metric-label">Earnings Per Share</div>
+						</div>
+					</div>
+					<aside class="notes">
+						Walk through each metric individually. Highlight the strong profit
+						margin and EPS growth compared to previous quarters. These numbers
+						reflect operational efficiency and market expansion.
+					</aside>
+				</section>
+
+				<!-- Animated List with Different Fragment Types -->
+				<section>
+					<h2>Strategic Initiatives</h2>
+					<ul>
+						<li class="fragment fade-right">
+							Enhanced cybersecurity infrastructure
+						</li>
+						<li class="fragment fade-right">
+							AI-powered fraud detection system
+						</li>
+						<li class="fragment fade-right">Mobile banking platform upgrade</li>
+						<li class="fragment fade-right">
+							Blockchain integration for settlements
+						</li>
+						<li class="fragment fade-right">
+							ESG investment portfolio expansion
+						</li>
+					</ul>
+					<aside class="notes">
+						These initiatives represent our commitment to innovation and
+						security. The AI fraud detection has already reduced incidents by
+						45%. Mobile platform upgrades have improved user engagement
+						significantly.
+					</aside>
+				</section>
+
+				<!-- Code Sample - Risk Assessment Algorithm -->
+				<section>
+					<h2>Technical Implementation</h2>
+					<h4>Risk Assessment Algorithm</h4>
+					<pre><code class="python" data-trim data-line-numbers="1-2|4-8|10-14">
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+
+def calculate_credit_risk_score(customer_data):
+    """
+    Calculate credit risk score using ML model
+    Returns: Risk score between 0-1000
+    """
+    
+    features = np.array([
+        customer_data['income'],
+        customer_data['debt_ratio'],
+        customer_data['payment_history'],
+        customer_data['credit_utilization']
+    ]).reshape(1, -1)
+    
+    # Normalize features
+    normalized = (features - features.mean()) / features.std()
+    
+    # Predict risk score
+    risk_probability = model.predict_proba(normalized)[0][1]
+    risk_score = int(risk_probability * 1000)
+    
+    return risk_score
+                </code></pre>
+					<aside class="notes">
+						This is our proprietary risk assessment algorithm implemented in
+						Python. We use RandomForest for robust predictions. The model is
+						trained on historical data and continuously updated. Notice the
+						feature engineering and normalization steps for accurate scoring.
+					</aside>
+				</section>
+
+				<!-- Mathematical Formulas -->
+				<section>
+					<h2>Financial Formulas & Calculations</h2>
+					<div style="text-align: left; margin: 30px 60px">
+						<p class="fragment fade-in">
+							<strong>Return on Equity (ROE):</strong>
+							$$ROE = \frac{\text{Net Income}}{\text{Shareholders' Equity}}
+							\times 100$$
+						</p>
+						<p class="fragment fade-in" style="margin-top: 40px">
+							<strong>Capital Adequacy Ratio:</strong>
+							$$CAR = \frac{\text{Tier 1 Capital + Tier 2
+							Capital}}{\text{Risk-Weighted Assets}} \times 100$$
+						</p>
+						<p class="fragment fade-in" style="margin-top: 40px">
+							<strong>Net Present Value (NPV):</strong>
+							$$NPV = \sum_{t=0}^{n} \frac{R_t}{(1+i)^t}$$
+							<small
+								>where $R_t$ = net cash flow, $i$ = discount rate, $t$ = time
+								period</small
+							>
+						</p>
+					</div>
+					<aside class="notes">
+						These are the core financial formulas we use in our analysis. Our
+						ROE this quarter is 18.7%, well above industry average of 12%. CAR
+						stands at 14.2%, exceeding regulatory requirements of 10.5%. NPV
+						calculations drive our investment decisions.
+					</aside>
+				</section>
+
+				<!-- Code Sample - Portfolio Optimization -->
+				<section>
+					<h2>Portfolio Optimization</h2>
+					<pre><code class="javascript" data-trim data-line-numbers>
+// Modern Portfolio Theory Implementation
+class PortfolioOptimizer {
+    constructor(assets, riskFreeRate = 0.03) {
+        this.assets = assets;
+        this.riskFreeRate = riskFreeRate;
+    }
+    
+    calculateSharpeRatio(returns, volatility) {
+        return (returns - this.riskFreeRate) / volatility;
+    }
+    
+    optimizeAllocation(targetReturn) {
+        const weights = this.efficientFrontier(targetReturn);
+        const portfolio = {
+            expectedReturn: this.calculateReturn(weights),
+            volatility: this.calculateVolatility(weights),
+            sharpeRatio: this.calculateSharpe(weights),
+            allocation: weights
+        };
+        return portfolio;
+    }
+}
+                </code></pre>
+					<aside class="notes">
+						Our portfolio optimization uses Modern Portfolio Theory. This
+						JavaScript implementation runs in our web platform. We calculate
+						optimal asset allocation for different risk profiles. The Sharpe
+						ratio helps us maximize risk-adjusted returns.
+					</aside>
+				</section>
+
+				<!-- Growth Projections with Fragments -->
+				<section data-background-color="#1a1a2e">
+					<h2>2026 Growth Projections</h2>
+					<div style="margin-top: 50px">
+						<p class="fragment highlight-current-blue">
+							Revenue growth target: <strong>18-22%</strong>
+						</p>
+						<p class="fragment highlight-current-blue">
+							Customer acquisition: <strong>500K new accounts</strong>
+						</p>
+						<p class="fragment highlight-current-blue">
+							Digital transactions: <strong>85% of total volume</strong>
+						</p>
+						<p class="fragment highlight-current-blue">
+							Cost reduction: <strong>12% through automation</strong>
+						</p>
+						<p class="fragment highlight-current-blue">
+							Market expansion: <strong>3 new regions</strong>
+						</p>
+					</div>
+					<aside class="notes">
+						These are conservative projections based on current trends. Digital
+						transformation is key to achieving these targets. Cost reduction
+						will come from AI automation and process optimization. Market
+						expansion includes both domestic and international opportunities.
+					</aside>
+				</section>
+
+				<!-- Technical Stack -->
+				<section>
+					<h2>Technology Stack</h2>
+					<div
+						style="
+							display: grid;
+							grid-template-columns: 1fr 1fr;
+							gap: 20px;
+							margin-top: 40px;
+						"
+					>
+						<div class="fragment fade-up">
+							<h4>Backend</h4>
+							<pre><code class="plaintext" data-trim>
+• Java Spring Boot
+• Python FastAPI
+• PostgreSQL
+• Redis Cache
+• Apache Kafka
+                        </code></pre>
+						</div>
+						<div class="fragment fade-up">
+							<h4>Frontend</h4>
+							<pre><code class="plaintext" data-trim>
+• React.js
+• TypeScript
+• Redux
+• Material-UI
+• WebSockets
+                        </code></pre>
+						</div>
+					</div>
+					<aside class="notes">
+						Our modern tech stack enables scalability and performance.
+						Microservices architecture provides flexibility and resilience.
+						Real-time data processing with Kafka supports instant transactions.
+						Frontend built with React provides excellent user experience.
+					</aside>
+				</section>
+
+				<!-- SQL Query Example -->
+				<section>
+					<h2>Data Analytics Query</h2>
+					<pre><code class="sql" data-trim data-line-numbers>
+-- Customer Lifetime Value Analysis
+WITH customer_metrics AS (
+    SELECT 
+        customer_id,
+        SUM(transaction_amount) as total_revenue,
+        COUNT(DISTINCT transaction_date) as engagement_days,
+        DATEDIFF(MAX(transaction_date), MIN(transaction_date)) as customer_age_days
+    FROM transactions
+    WHERE transaction_date >= '2025-01-01'
+    GROUP BY customer_id
+)
+SELECT 
+    cm.customer_id,
+    cm.total_revenue,
+    cm.total_revenue / NULLIF(cm.customer_age_days, 0) * 365 as annual_clv,
+    c.segment,
+    c.acquisition_channel
+FROM customer_metrics cm
+JOIN customers c ON cm.customer_id = c.id
+WHERE cm.total_revenue > 1000
+ORDER BY annual_clv DESC
+LIMIT 100;
+                </code></pre>
+					<aside class="notes">
+						This query calculates Customer Lifetime Value for our top customers.
+						We use this for segmentation and targeted marketing campaigns. The
+						analysis helps identify high-value customers for retention programs.
+					</aside>
+				</section>
+
+				<!-- Risk Metrics Formula -->
+				<section>
+					<h2>Value at Risk (VaR) Calculation</h2>
+					<p>Historical Simulation Method:</p>
+					<div style="text-align: left; margin: 30px 60px">
+						<p class="fragment">
+							$$\text{VaR}_\alpha = -\inf\{x \in \mathbb{R} : P(X \leq x) >
+							\alpha\}$$
+						</p>
+						<p class="fragment" style="margin-top: 30px">
+							For a 95% confidence level portfolio: $$\text{VaR}_{0.05} = \mu -
+							1.645\sigma$$
+						</p>
+						<p class="fragment" style="margin-top: 30px">
+							Expected Shortfall (Conditional VaR): $$\text{ES}_\alpha =
+							\mathbb{E}[X | X \leq \text{VaR}_\alpha]$$
+						</p>
+					</div>
+					<aside class="notes">
+						VaR measures potential loss in portfolio value. We use 95%
+						confidence level for standard risk assessment. Expected Shortfall
+						provides additional tail risk information. These metrics guide our
+						risk management strategies.
+					</aside>
+				</section>
+
+				<!-- Closing Slide -->
+				<section
+					data-background-gradient="linear-gradient(to bottom, #1e3a8a, #0f172a)"
+				>
+					<h2>Q&A</h2>
+					<p style="margin-top: 50px">Thank you for your attention</p>
+					<div style="margin-top: 60px">
+						<p><strong>Contact Information:</strong></p>
+						<p style="color: #4caf50; font-size: 1.2em">
+							<a
+								href="mailto:24f2001777@ds.study.iitm.ac.in"
+								style="color: #4caf50; text-decoration: none"
+								>24f2001777@ds.study.iitm.ac.in</a
+							>
+						</p>
+					</div>
+					<aside class="notes">
+						Open the floor for questions. Be prepared to discuss: - Detailed
+						breakdown of any financial metric - Technical implementation
+						challenges - Risk management strategies - Future growth initiatives
+						Thank stakeholders for their continued support and confidence.
+					</aside>
+				</section>
+			</div>
+		</div>
+
+		<!-- Email footer on all slides -->
+		<div class="email-footer">
+			<a
+				href="mailto:24f2001777@ds.study.iitm.ac.in"
+				style="color: #666; text-decoration: none"
+				>24f2001777@ds.study.iitm.ac.in</a
+			>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/markdown/markdown.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/highlight/highlight.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/notes/notes.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/plugin/math/math.js"></script>
+
+		<script>
+			Reveal.initialize({
+				hash: true,
+				controls: true,
+				progress: true,
+				center: true,
+				transition: "slide",
+				backgroundTransition: "fade",
+
+				// Math plugin configuration
+				math: {
+					mathjax:
+						"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
+					config: "TeX-AMS_HTML-full",
+				},
+
+				plugins: [
+					RevealMarkdown,
+					RevealHighlight,
+					RevealNotes,
+					RevealMath.KaTeX,
+				],
+			});
+		</script>
+	</body>
+</html>
